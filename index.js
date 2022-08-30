@@ -3,7 +3,7 @@ const { PeerServer } = require('peer');
 
 require('dotenv').config();
 
-let port = process.env.PORT ? Number(process.env.SSL_CERT_FILE_PATH) : 9000;
+let port = process.env.PORT ? Number(process.env.PORT) : 9000;
 let ssl = undefined;
 if (process.env.SSL_KEY_FILE_PATH && process.env.SSL_CERT_FILE_PATH) {
     ssl = {
