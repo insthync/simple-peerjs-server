@@ -16,3 +16,11 @@ const peerServer = PeerServer({
     port,
     ssl,
 });
+
+peerServer.on('connection', (client) => {
+    console.log("Client: " + client.getId() + " connected");
+});
+
+peerServer.on('disconnect', (client) => {
+    console.log("Client: " + client.getId() + " disconnected");
+});
